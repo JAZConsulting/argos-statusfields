@@ -46,9 +46,6 @@ Thumbs.db
 deploy/
 dist/
 
-# module development shells
-index-dev-*.html
-
 # vim temp files
 *.swp
 
