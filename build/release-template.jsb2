@@ -1,0 +1,11 @@
+{
+	"projectName": "SalesLogix Mobile StatusFields Module",
+	"licenseText": "",
+	"deployDir": "deploy/",
+	"pkgs": [],
+	"resources": [{
+		"src": "../configuration",
+		"dest": "configuration/statusfields",
+		"filters": ".*\\.js"
+	}]
+}

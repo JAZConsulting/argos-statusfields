@@ -1,0 +1,9 @@
+{
+    "name": "statusfields",
+    "displayName": "StatusFields Module",
+    "description": "StatusFields product for Sage SalesLogix Mobile client.",
+    "majorVersion": 1,
+    "minorVersion": 0,
+    "buildNumber": 0,
+    "targetProduct": "saleslogix"
+}
