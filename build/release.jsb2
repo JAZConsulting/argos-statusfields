@@ -17,6 +17,16 @@
   ],
   "resources": [
     {
+      "src": "../content",
+      "dest": "content",
+      "filters": ".*(\\.css|\\.jpg|\\.png|\\.gif)"
+    },
+    {
+      "src": "../min",
+      "dest": "content",
+      "filters": ".*(\\.css)"
+    },
+    {
       "src": "../configuration",
       "dest": "configuration/statusfields",
       "filters": ".*\\.js"

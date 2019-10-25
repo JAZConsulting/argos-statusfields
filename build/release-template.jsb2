@@ -4,6 +4,10 @@
 	"deployDir": "deploy/",
 	"pkgs": [],
 	"resources": [{
+		"src": "../content",
+		"dest": "content",
+		"filters": ".*(\\.css|\\.jpg|\\.png|\\.gif)"
+	},{
 		"src": "../configuration",
 		"dest": "configuration/statusfields",
 		"filters": ".*\\.js"
