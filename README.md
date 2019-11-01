@@ -48,7 +48,7 @@ mobile
 
 		http://localhost/mobile/products/argos-saleslogix/index-dev-sample.html
     
-5.\ For more resources/troubleshooting hints, please look at the original documentation on the [Saleslogix Page](https://github.com/Saleslogix) as this module follows the same/similar setup. *DO NOT USE THEIR EXAMPLES/SAMPLES FOR THE ###index-dev-* FILES, ESPECIALLY DON'T USE THE ONE IN argos-sample*
+5.\ For more resources/troubleshooting hints, please look at the original documentation on the [Saleslogix Page](https://github.com/Saleslogix) as this module follows the same/similar setup. *DO NOT USE THEIR EXAMPLES/SAMPLES FOR THE index-dev-xxx.html FILES, ESPECIALLY DON'T USE THE ONE IN argos-sample*
 
 # Building argos-statusfields into argos-saleslogix (NO AA)
 I have not had the best luck with resources from Infor in regards to CRM Mobile, so I have stuck with the 'bare-bones' method of modifying Infor's CRM Mobile; Plus, the saleslogix team already provides detailed information regarding using AA for deployment. Here is some information on my dev environment:
