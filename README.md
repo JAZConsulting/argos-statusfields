@@ -190,3 +190,5 @@ To:
           rootElement: document.getElementById('rootNode')
         });
 ```
+
+8.\ Profit! You should now navigate to your deployment folder and log into your newly customized crm 
