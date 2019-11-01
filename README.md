@@ -68,10 +68,11 @@ This guide will pertain to *Windows environments*, though I am sure those using 
 
 2.\ ([taken from argos-sample](https://github.com/argos-sample/)) Edit the Gruntfile.js in products/argos-saleslogix, add the product name (argos-statusfields) to the products configuration under grunt.initConfig. The basePath property is relative to products/argos-saleslogix
 
-3.\ open the windows command prompt and run the following commands:
+3.\ Open the windows command prompt and run the following commands (NOTE: assuming you're in products/argos-statusfields):
 
 ```
-	cd \mobile\argos-sdk\
+	.\build\release.cmd
+  cd ..\..\argos-sdk\
 	.\build\release.cmd
 	cd ..\products\argos-saleslogix\
 	.\build\release.cmd
@@ -81,16 +82,16 @@ This guide will pertain to *Windows environments*, though I am sure those using 
 ```
 code
 	|
-	> mobile <=== THIS IS MY DEV ENVIRONMENT ===|
+	> mobile <=== THIS IS MY PRIVATE DEV ENVIRONMENT ===|
 	       |
 	       > argos-sdk
 	       > products
 	                |
 	                > argos-saleslogix
 	                > argos-statusfields
-	> deploy   <=== THIS IS MY DEPLOYMENT FOLDER ===|
+	> deploy   <=== THIS IS MY PUBLIC DEPLOYMENT FOLDER ===|
 ```
-Copy all of the files from ```products/argos-sdk/deploy/``` into your deploy folder. Copy all of the files from ```products/argos-saleslogix/deploy/``` into ###your deploy folder.
+Copy all of the files from ```products/argos-sdk/deploy/``` into your deploy folder. Copy all of the files from ```products/argos-saleslogix/deploy/``` into your deploy folder. Copy all of the files from ```products/argos-statusfields/deploy/``` into your deploy folder. 
 
 5.\ Open the file ```module-fragment.html``` in your argos-statusfields folder. Copy the text with in the file, it should look like this
 
@@ -113,7 +114,7 @@ To:
 	<script type="text/javascript" src="content/javascript/argos-statusfields.js"></script>
 ```
 
-7.\ Now, we need to edit the ```index.html``` file to include our production config file: Edit the following: 
+7.\ Now, we need to edit the ```index.html``` and ```index.nocache.html``` file to include our production config file: Edit the following: 
 
 ```
 	require(['crm/polyfills/index', 'crm/Bootstrap'], function(polyfills, bootstrap) {

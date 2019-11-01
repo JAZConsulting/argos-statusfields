@@ -136,7 +136,6 @@ define('Mobile/StatusFields/ApplicationModule', [
             });
             // Set default order and buttons for CRM Left Pane GoTo Menu
 
-
         },
         registerErrorLogCustomizations: function(){
             /* Taken directly from argos-sample*/
