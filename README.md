@@ -90,7 +90,7 @@ code
 	                > argos-statusfields
 	> deploy   <=== THIS IS MY DEPLOYMENT FOLDER ===|
 ```
-Copy all of the files from ```products/argos-sdk/deploy/``` into ###your deploy folder. Copy all of the files from ```products/argos-saleslogix/deploy/``` into ###your deploy folder.
+Copy all of the files from ```products/argos-sdk/deploy/``` into your deploy folder. Copy all of the files from ```products/argos-saleslogix/deploy/``` into ###your deploy folder.
 
 5.\ Open the file ```module-fragment.html``` in your argos-statusfields folder. Copy the text with in the file, it should look like this
 
@@ -99,7 +99,7 @@ Copy all of the files from ```products/argos-sdk/deploy/``` into ###your deploy 
 	<script type="text/javascript" src="content/javascript/argos-statusfields.js"></script>
 ```
 
-6.\ ([taken from argos-sample](https://github.com/argos-sample/)) Edit ###index.html, ###index-nocache.html and ###index.ascx by copying the lines from module-fragment.html (the ones you added earlier, this file is not copied into the deploy folder so look for it in your normal dev directory) into each file at the designated modules marker:
+6.\ ([taken from argos-sample](https://github.com/argos-sample/)) Edit ```index.html```, ```index-nocache.html``` and ```index.ascx``` by copying the lines from module-fragment.html (the ones you added earlier, this file is not copied into the deploy folder so look for it in your normal dev directory) into each file at the designated modules marker:
 
 ```
     <!-- Modules -->
