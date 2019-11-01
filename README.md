@@ -30,8 +30,8 @@ This is a Product (Add-on) for Infor's Saleslogix CRM Mobile Application. This m
     git clone https://github.com/JAZConsulting/argos-statusfields 
 ```
 
-2.\ Now is a good time to verify that you have a folder structure that looks like this: 
-
+2.\ Now is a good time to verify that you have a folder structure that looks like this (NOTE: you will add to this): 
+```
 mobile 
       |
       > argos-sdk
@@ -39,7 +39,7 @@ mobile
                |
                > argos-saleslogix
                > argos-statusfields
-
+```
 3.\ copy the index-dev-statusfields.html file into the root of argos-saleslogix, you can use this command (NOTE: the command is relative to the mobile/products folder):
 ```
     cp ./argos-statusfields/index-dev-statusfields.html ./argos-saleslogix/
@@ -78,7 +78,7 @@ This guide will pertain to *Windows environments*, though I am sure those using 
 ```
 
 4.\ You should have a deployment folder set up which will hold all of the built, minified code. Here is my full structure, but you can use any deployed site/folder
-
+```
 code
 	|
 	> mobile <=== THIS IS MY DEV ENVIRONMENT ===|
@@ -89,7 +89,7 @@ code
 	                > argos-saleslogix
 	                > argos-statusfields
 	> deploy   <=== THIS IS MY DEPLOYMENT FOLDER ===|
-
+```
 Copy all of the files from products/argos-sdk/deploy/ into ###your deploy folder. Copy all of the files from products/argos-saleslogix/deploy/ into ###your deploy folder.
 
 5.\ Open the file module-fragment.html in your argos-statusfields folder. Copy the text with in the file, it should look like this
@@ -168,7 +168,6 @@ To:
           configuration: [
             'configuration/production',
             'configuration/statusfields/production'
-            
           ],
           application: 'crm/Application',
           legacyLocalization: [
