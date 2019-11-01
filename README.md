@@ -90,9 +90,9 @@ code
 	                > argos-statusfields
 	> deploy   <=== THIS IS MY DEPLOYMENT FOLDER ===|
 ```
-Copy all of the files from products/argos-sdk/deploy/ into ###your deploy folder. Copy all of the files from products/argos-saleslogix/deploy/ into ###your deploy folder.
+Copy all of the files from ```products/argos-sdk/deploy/``` into ###your deploy folder. Copy all of the files from ```products/argos-saleslogix/deploy/``` into ###your deploy folder.
 
-5.\ Open the file module-fragment.html in your argos-statusfields folder. Copy the text with in the file, it should look like this
+5.\ Open the file ```module-fragment.html``` in your argos-statusfields folder. Copy the text with in the file, it should look like this
 
 ```
 	<!-- CAS Module -->
@@ -113,7 +113,7 @@ To:
 	<script type="text/javascript" src="content/javascript/argos-statusfields.js"></script>
 ```
 
-7.\ Now, we need to edit the index.html file to include our production config file: Edit the following in index.html: 
+7.\ Now, we need to edit the ```index.html``` file to include our production config file: Edit the following: 
 
 ```
 	require(['crm/polyfills/index', 'crm/Bootstrap'], function(polyfills, bootstrap) {
