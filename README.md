@@ -55,23 +55,25 @@ I have not had the best luck with resources from Infor in regards to CRM Mobile,
 
 * Windows 10/2016 Environment
 * NPM & Grunt are both installed on the Web Server where I develop/build
-* you can GIT Bash for some debugging/development processes
-* you must use native windows CMD for the build && release processes
+* you can GIT Bash or some other linux for some debugging/development processes
+* **you must use native windows CMD for the build && release processes**
 
 This guide will pertain to *Windows environments*, though I am sure those using Linux can modify this accordingly; argos-sdk && argos-saleslogix contain all of the 'bare-bones' tools for either linux or windows environments. We will be following the directions [taken from argos-sample](https://github.com/argos-sample/) so you can use those as an extra reference, but we will be deviating from those steps:
 
-1.\ ([taken from argos-sample](https://github.com/argos-sample/)) Information about your customization module is defined in the module-info.json file at the root directory. This information will be displayed in Application Architect for easy identification and versioning.
+1.\ ([taken from argos-sample](https://github.com/argos-sample/)) 
+Information about your customization module is defined in the module-info.json file at the root directory. This information will be displayed in Application Architect for easy identification and versioning. Edit this file to include your information.
 
 ```
 	mobile/products/argos-statusfields/module-info.json
 ```
 
-2.\ ([taken from argos-sample](https://github.com/argos-sample/)) Edit the Gruntfile.js in products/argos-saleslogix, add the product name (argos-statusfields) to the products configuration under grunt.initConfig. The basePath property is relative to products/argos-saleslogix
+2.\ ([taken from argos-sample](https://github.com/argos-sample/)) 
+Edit the Gruntfile.js in products/argos-saleslogix, add the product name (argos-statusfields) to the products configuration under grunt.initConfig. The basePath property is relative to products/argos-saleslogix
 
-3.\ open the windows command prompt and run the following commands:
+3.\ open the windows command prompt and run the following commands (NOTE: path is relative to your ```argos-statusfields``` folder:
 
 ```
-	cd \mobile\argos-sdk\
+	cd ..\..\argos-sdk\
 	.\build\release.cmd
 	cd ..\products\argos-saleslogix\
 	.\build\release.cmd
