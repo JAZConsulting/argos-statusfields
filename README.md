@@ -53,10 +53,10 @@ mobile
 # Building argos-statusfields into argos-saleslogix (NO AA)
 I have not had the best luck with resources from Infor in regards to CRM Mobile, so I have stuck with the 'bare-bones' method of modifying Infor's CRM Mobile; Plus, the saleslogix team already provides detailed information regarding using AA for deployment. Here is some information on my dev environment:
 
-..* Windows 10/2016 Environment
-..* NPM & Grunt are both installed on the Web Server where I develop/build
-..* you can GIT Bash for some debugging/development processes
-..* you must use native windows CMD for the build && release processes
+* Windows 10/2016 Environment
+* NPM & Grunt are both installed on the Web Server where I develop/build
+* you can GIT Bash for some debugging/development processes
+* you must use native windows CMD for the build && release processes
 
 This guide will pertain to *Windows environments*, though I am sure those using Linux can modify this accordingly; argos-sdk && argos-saleslogix contain all of the 'bare-bones' tools for either linux or windows environments. We will be following the directions [taken from argos-sample](https://github.com/argos-sample/) so you can use those as an extra reference, but we will be deviating from those steps:
 
