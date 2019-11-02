@@ -23,7 +23,7 @@ The original, unaltered Saleslogix Client can be found [here](https://github.com
 
 # Installing argos-statusfields in debug mode
 ### NOTE: You should not start this until you can run the default saleslogix application in your web browser
-This is a Product (Add-on) for Infor's Saleslogix CRM Mobile Application. This mod overlays directly on top of the stock argos-saleslogix application. To install:
+This is a Product (Add-on) for Infor's Saleslogix CRM Mobile Application. This mod overlays directly on top of the stock argos-saleslogix application. I will note that unless specified, you these commands are run in GIT Bash. To install:
 
 1.\ Navigate into your products folder. Run the command:
 ```
@@ -40,10 +40,16 @@ mobile
                > argos-saleslogix
                > argos-statusfields
 ```
-3.\ copy the index-dev-statusfields.html file into the root of argos-saleslogix, you can use this command (NOTE: the command is relative to the mobile/products folder):
+3a.\ copy the index-dev-statusfields.html file into the root of argos-saleslogix, you can use this command (NOTE: the command is relative to the mobile/products folder):
 ```
     cp ./argos-statusfields/index-dev-statusfields.html ./argos-saleslogix/
 ```
+
+3b.\ Now should be a good time to create some necessary directories in the ```argos-statusfields``` folder; run this command:
+```
+    mkdir ./content && mkdir ./css && mkdir ./css/min
+```
+
 4.\	([taken from argos-sample](https://github.com/argos-sample/))In your browser, open index-dev-sample.html from the file system, or...navigate to the path `/mobile/products/argos-saleslogix/index-dev-sample.html` on your web server, eg:
 
 		http://localhost/mobile/products/argos-saleslogix/index-dev-sample.html
@@ -73,7 +79,7 @@ Edit the Gruntfile.js in products/argos-saleslogix, add the product name (argos-
 3.\ Open the windows command prompt and run the following commands (NOTE: assuming you're in products/argos-statusfields):
 
 ```
-	.\build\release.cmd
+  .\build\release.cmd
   cd ..\..\argos-sdk\
 	.\build\release.cmd
 	cd ..\products\argos-saleslogix\
