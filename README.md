@@ -32,13 +32,15 @@ This is a Product (Add-on) for Infor's Saleslogix CRM Mobile Application. This m
 
 2.\ Now is a good time to verify that you have a folder structure that looks like this (NOTE: you will add to this): 
 ```
-mobile 
-      |
-      > argos-sdk
-      > products <=== You are here ===|
-               |
-               > argos-saleslogix
-               > argos-statusfields
+code
+  |
+  > mobile <=== THIS IS MY PRIVATE DEV ENVIRONMENT ===|
+         |
+         > argos-sdk
+         > products
+                  |
+                  > argos-saleslogix
+                  > argos-statusfields
 ```
 3a.\ copy the index-dev-statusfields.html file into the root of argos-saleslogix, you can use this command (NOTE: the command is relative to the mobile/products folder):
 ```
