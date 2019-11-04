@@ -81,10 +81,10 @@ Edit the Gruntfile.js in products/argos-saleslogix, add the product name (argos-
 3.\ Open the windows command prompt and run the following commands (NOTE: assuming you're in products/argos-statusfields):
 
 ```
-  .\build\release.cmd
-  cd ..\..\argos-sdk\
-	.\build\release.cmd
-	cd ..\products\argos-saleslogix\
+ .\build\release.cmd
+ cd ..\..\argos-sdk\
+.\build\release.cmd
+cd ..\products\argos-saleslogix\
 	.\build\release.cmd
 ```
 
