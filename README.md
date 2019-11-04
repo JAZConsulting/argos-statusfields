@@ -83,9 +83,9 @@ Edit the Gruntfile.js in products/argos-saleslogix, add the product name (argos-
 ```
  .\build\release.cmd
  cd ..\..\argos-sdk\
-.\build\release.cmd
-cd ..\products\argos-saleslogix\
-	.\build\release.cmd
+ .\build\release.cmd
+ cd ..\products\argos-saleslogix\
+ .\build\release.cmd
 ```
 
 4.\ You should have a deployment folder set up which will hold all of the built, minified code. Here is my full structure, but you can use any deployed site/folder
