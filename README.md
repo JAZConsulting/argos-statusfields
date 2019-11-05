@@ -32,8 +32,6 @@ The original, unaltered Saleslogix Client can be found [here](https://github.com
 - - -
 - - -
 
-You can go through and piece-meal more mods into this existing project, or at minimum run this mod ontop of your existing Saleslogix Mobile CRM. I built this page mostly to document a solid process for developing and deploying mods without the use of AA. 
-
 # Installing argos-statusfields in debug mode
 ### NOTE: You should not start this until you can run the default saleslogix application in your web browser
 This is a Product (Add-on) for Infor's Saleslogix CRM Mobile Application. This mod overlays directly on top of the stock argos-saleslogix application. I will note that unless specified, you these commands are run in GIT Bash. To install:
