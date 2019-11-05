@@ -1,10 +1,21 @@
+# What does this Mod for?
+This code will Mod Infor's Saleslogix Mobile CRM Platform.This particular mod changes the following 5 things in CRM:
+* Enable the field '**Status** for leads in the Edit & Detail views
+* Changed the Related Contacts query to only query for related contacts with an ERPStatus of '**Open**'
+* Enabled Offline support
+* Changed the '**Add Account Contact**' Quick Action to insert a new lead
+
+This mod involves no customizations to the underlying CRM Mobile Platform, and can therefore be run ontop of any stock version of Infor CRM Mobile 3.4 or greater, and it could run on modded, customized or even heavily modded CRMs assuming the other mods don't remove the fields used in this modification package.
+
+To Get started, just start reading below :)
+
 # Infor CRM Customizations
 The following customization applies to Infors Mobile CRM platform. To get started, you should already have: 
 
 * Infor Saleslogix CRM
 * a development environment
 
-The following is taken from the original saleslogix client git, which is linked at the bottom of the section. Use this to set up your argos environment, then head to the next section.
+The following is taken from the original saleslogix client git, which is linked at the bottom of the section. Use this to set up your argos environment, then head to the next section. You should complete the stock Infor section before attempting to install my mod.
 
 - - -
 - - -
@@ -20,6 +31,8 @@ The original, unaltered Saleslogix Client can be found [here](https://github.com
 
 - - -
 - - -
+
+You can go through and piece-meal more mods into this existing project, or at minimum run this mod ontop of your existing Saleslogix Mobile CRM. I built this page mostly to document a solid process for developing and deploying mods without the use of AA. 
 
 # Installing argos-statusfields in debug mode
 ### NOTE: You should not start this until you can run the default saleslogix application in your web browser
