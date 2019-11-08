@@ -65,7 +65,7 @@ define('Mobile/StatusFields/ApplicationModule', [
             });
 
             this.registerCustomization('detail', 'lead_detail', {
-                at: function (row) { return row.name == 'Owner.OwnerDescription'; },
+                at: function (row) { return row.name == 'Company'; },
                 type: 'insert',
                 where: 'after',
                 value: {
@@ -105,7 +105,12 @@ define('Mobile/StatusFields/ApplicationModule', [
                     requireSelection: true,
                     title: 'Lead Status'
                 }
-            });            
+            });
+            // Auto
+            // this.registerCustomization('edit','lead_edit',{
+            //     at: function(row) { return row.name == 'Company'; }
+
+            // });
 
         },
         registerLeftDrawerCustomizations: function () {
