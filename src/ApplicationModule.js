@@ -43,13 +43,55 @@ define('Mobile/StatusFields/ApplicationModule', [
 
         },
         registerContactCustomizations: function () {
-
+            // Only show contacts that have ErpStatus of Open
             this.registerCustomization('detail', 'account_detail', {
               at: function(row) { return row.name == 'ContactRelated'; },
               type: 'modify',
               value: {
                 where: function (entry) { return "Account.id eq '" + entry['$key'] + "' and ErpStatus eq 'Open'"}
               }
+            });
+            // Modify the model to include Status in the query
+            this.registerCustomization('models/detail/querySelect', 'contact_sdata_model', {
+                at: function() { return true; },
+                type: 'insert',
+                where: 'after',
+                value: 'Status'
+            });
+            // Insert Contact Status after Owner field
+            this.registerCustomization('detail', 'contact_detail', {
+                at: function (row) { return row.name == 'Owner.OwnerDescription'; },
+                type: 'insert',
+                where: 'after',
+                value: {
+                    name: 'Status',
+                    label: 'Status',
+                    property: 'Status',
+                    renderer: format.picklist('Status')
+                }
+            });
+
+            // Modify the model to include Status in the query
+            this.registerCustomization('models/edit/querySelect', 'contact_sdata_model', {
+                at: function() { return true; },
+                type: 'insert',
+                where: 'after',
+                value: 'Status'
+            });
+            // Replace cuisine with the status field in the Edit page for contacts
+            this.registerCustomization('edit', 'contact_edit', {
+                at: function (row) { return row.name == 'CuisinePreference'; },
+                type: 'modify',
+                //where: 'after',
+                value: {
+                    name: 'Status',
+                    label: 'Status',
+                    property: 'Status',
+                    type: 'picklist',
+                    picklist: 'Contact Status',
+                    requireSelection: true,
+                    title: 'Contact Status'
+                }
             });
 
         },
@@ -106,12 +148,7 @@ define('Mobile/StatusFields/ApplicationModule', [
                     title: 'Lead Status'
                 }
             });
-            // Auto
-            // this.registerCustomization('edit','lead_edit',{
-            //     at: function(row) { return row.name == 'Company'; }
-
-            // });
-
+            
         },
         registerLeftDrawerCustomizations: function () {
             // Extend view to add call method to inserting a new lead
@@ -124,6 +161,39 @@ define('Mobile/StatusFields/ApplicationModule', [
                       });
                       this.closeAppMenu();
                     }
+                },
+                openCustomerServiceForm: function openCustomerServiceForm() {
+                    window.open("https://YOURLINKHERE")
+                },
+                openApplianceCustomerServiceForm: function openApplianceCustomerServiceForm() {
+                    window.open("https://YOURLINKHERE")
+                }
+            });
+            // Add link to Showroom Customer Service Form
+            this.registerCustomization('left_drawer','left_drawer', {
+                at: function (row) {
+                    return row.name == 'AddAccountContactAction'
+                },
+                type: 'insert',
+                where: 'after',
+                value: {
+                    name: 'OpenCustomerServiceForm',
+                    title: 'Showroom Customer Service Form',
+                    action: 'openCustomerServiceForm',
+                    security: 'Entities/Lead/Add'
+                }
+            });
+            this.registerCustomization('left_drawer','left_drawer', {
+                at: function (row) {
+                    return row.name == 'AddAccountContactAction'
+                },
+                type: 'insert',
+                where: 'after',
+                value: {
+                    name: 'OpenApplianceCustomerServiceForm',
+                    title: 'Appliance Customer Service Form',
+                    action: 'openApplianceCustomerServiceForm',
+                    security: 'Entities/Lead/Add'
                 }
             });
             // Modify existing quick action to add lead instead
@@ -139,8 +209,6 @@ define('Mobile/StatusFields/ApplicationModule', [
                     security: 'Entities/Lead/Add'
                 }
             });
-            // Set default order and buttons for CRM Left Pane GoTo Menu
-
         },
         registerErrorLogCustomizations: function(){
             /* Taken directly from argos-sample*/
