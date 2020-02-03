@@ -163,10 +163,10 @@ define('Mobile/StatusFields/ApplicationModule', [
                     }
                 },
                 openCustomerServiceForm: function openCustomerServiceForm() {
-                    window.open("https://YOURLINKHERE")
+                    window.open("https://YOURLINKHERE!")
                 },
                 openApplianceCustomerServiceForm: function openApplianceCustomerServiceForm() {
-                    window.open("https://YOURLINKHERE")
+                    window.open("https://YOURLINKHERE!")
                 }
             });
             // Add link to Showroom Customer Service Form
