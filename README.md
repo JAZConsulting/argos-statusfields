@@ -63,9 +63,13 @@ code
     mkdir ./content && mkdir ./css && mkdir ./css/min
 ```
 
-4.\	([taken from argos-sample](https://github.com/argos-sample/))In your browser, open index-dev-sample.html from the file system, or...navigate to the path `/mobile/products/argos-saleslogix/index-dev-sample.html` on your web server, eg:
+4a.\	([taken from argos-sample](https://github.com/argos-sample/))In your browser, open index-dev-sample.html from the file system, or...navigate to the path `/mobile/products/argos-saleslogix/index-dev-sample.html` on your web server, eg:
 
 		http://localhost/mobile/products/argos-saleslogix/index-dev-sample.html
+
+4b.\ For your specific mod or if you are cloning and using this mod outright, you are going to want to open index-dev-statusfields.html (or your specific index-dev-####.html file) from the file system, or...navigate to the path `/mobile/products/argos-saleslogix/index-dev-sample.html` on your web server, eg:
+
+		http://localhost/mobile/products/argos-saleslogix/index-dev-statusfields.html
     
 5.\ For more resources/troubleshooting hints, please look at the original documentation on the [Saleslogix Page](https://github.com/Saleslogix) as this module follows the same/similar setup. *DO NOT USE THEIR EXAMPLES/SAMPLES FOR THE index-dev-xxx.html FILES, ESPECIALLY DON'T USE THE ONE IN argos-sample*
 
